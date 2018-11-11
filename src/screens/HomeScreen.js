@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-import { createStackNavigator } from 'react-navigation';
+import { View, Text, Button } from 'react-native';
 
 class HomeScreen extends Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>Home Screen</Text>
+        <Button
+          title="Go to Details"
+          onPress={() => this.props.navigation.navigate('Details')}
+        />
       </View>
     );
   }
 }
-
-export default createStackNavigator({
-  Home: {
-    screen: HomeScreen,
-  },
-});
+export default HomeScreen;
