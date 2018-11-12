@@ -1,15 +1,15 @@
 import { createSwitchNavigator } from 'react-navigation';
 
-import LandingScreen from '../screens/LandingScreen';
-import AuthStack from './AuthorizedNavigator';
+import UnauthorizedNavigator from './UnauthorizedNavigator';
+import AuthorizedNavigator from './AuthorizedNavigator';
 
 const RouteConfigs = {
-  Landing: LandingScreen,
-  AuthStack,
+  UnauthModal: UnauthorizedNavigator,
+  AuthStack: AuthorizedNavigator,
 };
 
 const SwitchNavigatorConfig = {
-  initialRouteName: 'Landing',
+  initialRouteName: 'UnauthModal',
 };
 
 const RootNavigator = createSwitchNavigator(

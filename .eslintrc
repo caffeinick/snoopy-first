@@ -4,6 +4,7 @@
     "browser": true
   },
   "rules": {
-    "react/jsx-filename-extension": "off"
+    "react/jsx-filename-extension": "off",
+    "no-use-before-define": "off"
   }
 }

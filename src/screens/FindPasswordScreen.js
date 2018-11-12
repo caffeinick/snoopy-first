@@ -1,11 +1,11 @@
 import React from 'react';
-import { StatusBar, View, Text, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 import PropTypes from 'prop-types';
 
 import Button from '../components/Button';
 
-const LandingScreen = ({ navigation: { navigate } }) => {
+const FindPasswordScreen = ({ navigation }) => {
   const {
     containerStyle,
     marginContainerStyle,
@@ -15,37 +15,30 @@ const LandingScreen = ({ navigation: { navigate } }) => {
 
   return (
     <SafeAreaView style={containerStyle}>
-      <StatusBar hidden />
-
       <View style={marginContainerStyle}>
-        <Text style={titleStyle}>Welcome!</Text>
+        <Text style={titleStyle}>Forgot Password...</Text>
+        <Text style={titleStyle}>OMG</Text>
       </View>
 
       <View style={bodyStyle}>
         <Button
           onPress={() => {
-            navigate('Home');
+            navigation.pop(1);
           }}
-          title="Login"
-        />
-        <Button
-          onPress={() => {
-            navigate('FindPassword');
-          }}
-          title="Forgot Password"
+          title="I will not forget never again!"
         />
       </View>
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
+const styles = {
   containerStyle: {
     flex: 1,
-    backgroundColor: '#F0B800',
+    backgroundColor: 'gray',
   },
   marginContainerStyle: {
-    flex: 0.6,
+    flex: 0.5,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -59,12 +52,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+};
 
-LandingScreen.propTypes = {
+FindPasswordScreen.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func.isRequired,
   }).isRequired,
 };
 
-export default LandingScreen;
+export default FindPasswordScreen;
