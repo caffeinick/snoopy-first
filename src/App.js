@@ -1,7 +1,7 @@
 import React from 'react';
 
-import RootStackNavigator from './navigators/RootStackNavigator';
+import RootNavigator from './navigators/RootNavigator';
 
-const App = () => <RootStackNavigator />;
+const App = () => <RootNavigator />;
 
 export default App;
