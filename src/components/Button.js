@@ -2,6 +2,16 @@ import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 
+const Button = ({ onPress, title }) => {
+  const { buttonStyle, textStyle } = styles;
+
+  return (
+    <TouchableOpacity style={buttonStyle} onPress={onPress}>
+      <Text style={textStyle}>{title}</Text>
+    </TouchableOpacity>
+  );
+};
+
 const styles = {
   buttonStyle: {
     width: 300,
@@ -20,16 +30,6 @@ const styles = {
     fontSize: 20,
     fontWeight: 'bold',
   },
-};
-
-const Button = ({ onPress, title }) => {
-  const { buttonStyle, textStyle } = styles;
-
-  return (
-    <TouchableOpacity style={buttonStyle} onPress={onPress}>
-      <Text style={textStyle}>{title}</Text>
-    </TouchableOpacity>
-  );
 };
 
 Button.propTypes = {

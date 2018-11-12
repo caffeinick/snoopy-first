@@ -2,14 +2,6 @@ import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
 const HomeScreen = ({ navigation }) => (
   <View style={styles.container}>
     <Text>Home Screen</Text>
@@ -19,6 +11,14 @@ const HomeScreen = ({ navigation }) => (
     />
   </View>
 );
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 HomeScreen.propTypes = {
   navigation: PropTypes.shape({
