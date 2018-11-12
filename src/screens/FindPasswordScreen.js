@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 import PropTypes from 'prop-types';
 
-import Button from '../components/Button';
+import { Button } from '../components';
 
 const FindPasswordScreen = ({ navigation }) => {
   const {
