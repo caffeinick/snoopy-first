@@ -1,10 +1,13 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { Text, Button, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-navigation';
+import PropTypes from 'prop-types';
 
-const DetailsScreen = () => (
-  <View style={styles.container}>
+const DetailsScreen = ({ navigation }) => (
+  <SafeAreaView style={styles.container}>
     <Text>Details Screen</Text>
-  </View>
+    <Button title="Go Back to Home" onPress={() => navigation.pop()} />
+  </SafeAreaView>
 );
 
 const styles = StyleSheet.create({
@@ -14,5 +17,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+DetailsScreen.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired,
+  }).isRequired,
+};
 
 export default DetailsScreen;
