@@ -10,6 +10,7 @@ const RouteConfigs = {
 
 const StackNavigatorConfig = {
   initialRouteName: 'Home',
+  headerMode: 'none',
 };
 
 const AuthorizedNavigator = createStackNavigator(

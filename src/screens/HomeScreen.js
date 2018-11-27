@@ -1,15 +1,16 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { Text, Button, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-navigation';
 import PropTypes from 'prop-types';
 
 const HomeScreen = ({ navigation }) => (
-  <View style={styles.container}>
+  <SafeAreaView style={styles.container}>
     <Text>Home Screen</Text>
     <Button
       title="Go to Details"
       onPress={() => navigation.navigate('Details')}
     />
-  </View>
+  </SafeAreaView>
 );
 
 const styles = StyleSheet.create({
